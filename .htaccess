@@ -14,4 +14,4 @@ Header set Cache-Control "max-age=604800, public"
 
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ index.php [NC,L]
+RewriteRule ^([^\.]+)$ $1.php [NC,L]

@@ -84,7 +84,7 @@ function get_dirs()
 
 	<div class="page-count animated fadeInLeft delay-2s"><span class="pager">1</span>/<span class="paged">1</span></div>
 	<div class="menu-trigger">
-		<a class="home" href='index.php'><img src="assets/img/home.png"></a>
+		<a class="home" href='index'><img src="assets/img/home.png"></a>
 		<aside class="menu">
 		  <p class="menu-label">Slides</p>
 		  <ul class="menu-list">
