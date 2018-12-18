@@ -2,9 +2,9 @@
 
 html {
   animation: fadeSiteIn 1s ease forwards;
-  background: #111;
   animation-delay: .5s;
   opacity: 0;
+  background: #111;
 }
 
 html.fadeSiteOut {
@@ -12,8 +12,6 @@ html.fadeSiteOut {
 }
 
 @keyframes fadeSiteIn {
-
-  /* [1] */
   from {
     opacity: 0;
   }
@@ -24,7 +22,6 @@ html.fadeSiteOut {
 }
 
 @keyframes fadeSiteOut {
-
   from {
     opacity: 1;
   }
@@ -63,9 +60,14 @@ pre {
 p {
   line-height: 1.5em;
 }
-.section {
-  background: #000 ;
+
+.section:nth-child(even){
+  background: #111;
 }
+.section:nth-child(odd){
+  background: #000;
+}
+
 strong {
   color: #fff;
   font-size: 150%;
