@@ -27,6 +27,7 @@ function all($Parsedown)
         $dir = 'content/'. $_REQUEST['p'] . '/';
         $files = glob($dir . '*.md', GLOB_BRACE);
         $c = 0;
+				natsort($files);
         foreach ($files as $file) {
             $c++;
             $col = 'section' . $c;

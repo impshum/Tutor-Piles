@@ -63,7 +63,9 @@ pre {
 p {
   line-height: 1.5em;
 }
-
+.section {
+  background: #000 ;
+}
 strong {
   color: #fff;
   font-size: 150%;

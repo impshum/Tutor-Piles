@@ -3,7 +3,7 @@ var leaver;
 $(document).ready(function() {
   $('#pagepiling').pagepiling({
     menu: '#menu',
-    sectionsColor: ['#111', '#000', '#111', '#000', '#111'],
+    //sectionsColor: ['#111', '#000', '#111', '#000', '#111'],
     onLeave: function(index, nextIndex, direction) {
       leaver = '#section' + nextIndex;
       console.log(leaver);
