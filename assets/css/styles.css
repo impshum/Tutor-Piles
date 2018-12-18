@@ -62,10 +62,10 @@ p {
 }
 
 .section:nth-child(even){
-  background: #111;
+  background: #0a0a0a;
 }
 .section:nth-child(odd){
-  background: #000;
+  background: #050505;
 }
 
 strong {
