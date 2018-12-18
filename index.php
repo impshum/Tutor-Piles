@@ -32,23 +32,13 @@ function all($Parsedown)
         $col = 'section' . $c;
         $content = read_file($file, $Parsedown);
 
-        echo "
-				<div class='section' id='$col'>
-					<div class='container'>
-					  <div class='columns is-vcentered is-mobile is-centered'>
-						";
+        echo "<div class='section' id='$col'><div class='container'><div class='columns is-vcentered is-mobile is-centered'>";
         foreach ($content as $half) {
-            echo "
-						    <div class='column is-6 move'>
-						      <div class='content has-text-white has-text-left'>";
+          echo "<div class='column is-6 move'><div class='content has-text-white has-text-left'>";
           echo $Parsedown->text($half);
           echo "</div></div>";
         }
-        echo "
-					  </div>
-					</div>
-				</div>
-				";
+        echo "</div></div></div>";
     }
 }
 ?>
