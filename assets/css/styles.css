@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee|Titillium+Web:700');
+
+html {
+  background: #111;
+}
+
+body {
+  color: #4a4a4a;
+  font-family: 'Titillium Web', sans-serif;
+  opacity: 1;
+  transition: 1s opacity;
+}
+
+body.fade-out {
+  opacity: 0;
+  transition: none;
+}
+
+h1.head-title {
+  font-family: 'Bungee', cursive;
+  color: #fff;
+}
+
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+  color: #fefefe;
+  overflow: hidden;
+}
+
+.page-count {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  color: #fff;
+  z-index: 9999;
+}
+
+/*
+#section1 {
+  background: url(../img/1.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#section2 {
+  background: url(../img/2.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#section3 {
+  background: url(../img/3.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#section4 {
+  background: url(../img/4.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+*/
+.card {
+  background: rgba(0, 0, 0, 1);
+  border: 1px solid rgba(255, 255, 255, .7);
+}
+
+.card p {
+  color: #fefefe;
+}
+
+img.project {
+  object-fit: cover;
+}
+
+pre {
+  background: #282c34;
+}
