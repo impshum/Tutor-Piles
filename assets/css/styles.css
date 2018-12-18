@@ -1,37 +1,141 @@
 @import url('https://fonts.googleapis.com/css?family=Bungee|Titillium+Web:700');
 
 html {
+  animation: fadeSiteIn 1s ease forwards;
   background: #111;
+  animation-delay: .5s;
+  opacity: 0;
+}
+
+html.fadeSiteOut {
+  animation: fadeSiteOut 1s ease forwards;
+}
+
+@keyframes fadeSiteIn {
+
+  /* [1] */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeSiteOut {
+
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
 
 body {
+  transition: 1s opacity;
+  opacity: 1;
   color: #4a4a4a;
   font-family: 'Titillium Web', sans-serif;
-  opacity: 1;
-  transition: 1s opacity;
 }
 
 body.fade-out {
-  opacity: 0;
   transition: none;
+  opacity: 0;
 }
 
-h1.head-title {
-  font-family: 'Bungee', cursive;
+h1 {
   color: #fff;
+  font-family: 'Bungee', cursive;
 }
 
 .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
-  color: #fefefe;
   overflow: hidden;
+  color: #fefefe;
+}
+
+pre {
+  background: #282c34;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+strong {
+  color: #fff;
+  font-size: 150%;
 }
 
 .page-count {
   position: fixed;
+  z-index: 999;
   top: 5px;
   left: 5px;
   color: #fff;
+}
+
+.menu-trigger {
+  position: fixed;
   z-index: 9999;
+  top: 0;
+  left: -49%;
+  overflow: auto;
+  width: 50%;
+  height: 100%;
+  padding: 3em;
+  transition: .3s;
+  opacity: 0;
+  background: #000;
+}
+
+.menu-trigger:hover {
+  left: 0%;
+  width: 50%;
+  transition: .3s;
+  opacity: 1;
+}
+
+.menu-trigger::-webkit-scrollbar {
+  width: 6px;
+}
+
+.menu-trigger::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.menu-trigger::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+.menu-list a, .menu-label {
+  color: #fff;
+}
+
+.home {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 25px;
+  transition: .3s;
+  opacity: .7;
+}
+
+.home:hover {
+  transition: .3s;
+  opacity: 1;
+}
+
+.digital-clock {
+  position: fixed;
+  z-index: 9;
+  top: 5px;
+  right: 5px;
+  margin: auto;
+  text-align: center;
+  color: #fff;
 }
 
 /*
@@ -66,19 +170,3 @@ h1.head-title {
   background-size: cover;
 }
 */
-.card {
-  background: rgba(0, 0, 0, 1);
-  border: 1px solid rgba(255, 255, 255, .7);
-}
-
-.card p {
-  color: #fefefe;
-}
-
-img.project {
-  object-fit: cover;
-}
-
-pre {
-  background: #282c34;
-}
