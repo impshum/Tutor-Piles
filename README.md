@@ -43,3 +43,9 @@ When creating a new slideshow create a new folder with the name starting in the 
 #### **IMPORTANT MENU JIGGERY**
 
 To access the menu push the cursor to the left side of the window. It should slide open on hover.
+
+---
+
+To run a simple PHP server...
+
+    php -S 0.0.0.0:8080 -t /path/to/folder/with/index.php
