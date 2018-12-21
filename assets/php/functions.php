@@ -39,7 +39,7 @@ function all($Parsedown)
         }
     } else {
         $content = read_file('content/index.md', $Parsedown);
-        echo "<style>.content h1 {font-size:4em; }#pp-nav, .page-count {display:none;}</style><div class='section'><div class='container'><div class='columns is-vcentered is-centered'><div class='column is-6 move'><div class='content has-text-white has-text-centered'>";
+        echo "<style>.content h1 {font-size:4em; }#pp-nav, .page-count {display:none;} .help {display:block;}</style><div class='section'><div class='container'><div class='columns is-vcentered is-centered'><div class='column is-6 move'><div class='content has-text-white has-text-centered'>";
         echo $Parsedown->text($content[0]);
         echo "</div></div></div></div></div>";
     }
@@ -55,6 +55,6 @@ function get_dirs()
         $d3 = str_replace('-', ' ', $d2);
         $d4 = ltrim($d3);
         $d5 = ucfirst($d4);
-        echo "<li><a href='?$d1[1]'>$d5</a></li>";
+        echo "<li><a class='dirs' href='?$d1[1]'>$d5</a></li>";
     }
 }

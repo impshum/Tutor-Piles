@@ -3401,6 +3401,76 @@
   animation-name: slideInRight;
 }
 
+@-webkit-keyframes slideInRightClock {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: .5;
+  }
+}
+
+@keyframes slideInRightClock {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: .5;
+  }
+}
+
+.slideInRightClock {
+  -webkit-animation-name: slideInRightClock;
+  animation-name: slideInRightClock;
+}
+
+
+@-webkit-keyframes slideInLeftClock {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: .8;
+  }
+}
+
+@keyframes slideInLeftClock {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: .8;
+  }
+}
+
+.slideInLeftClock {
+  -webkit-animation-name: slideInLeftClock;
+  animation-name: slideInLeftClock;
+}
+
+
+
+
 @-webkit-keyframes slideInUp {
   from {
     -webkit-transform: translate3d(0, 100%, 0);
@@ -3574,18 +3644,18 @@
 }
 
 .animated.delay-2s {
-  -webkit-animation-delay: 1.5s;
-  animation-delay: 1.5s;
+  -webkit-animation-delay: 1.6s;
+  animation-delay: 1.6s;
 }
 
 .animated.delay-3s {
-  -webkit-animation-delay: 3s;
-  animation-delay: 3s;
+  -webkit-animation-delay: 2.4s;
+  animation-delay: 2.4s;
 }
 
 .animated.delay-4s {
-  -webkit-animation-delay: 4s;
-  animation-delay: 4s;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
 }
 
 .animated.delay-5s {
