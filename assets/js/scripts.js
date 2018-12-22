@@ -40,15 +40,43 @@ $(document).ready(function() {
   $('.paged').text($('.section').length);
 
   $('html').keydown(function(event) {
-    var check = $('.menu-container').hasClass('show-menu');
+    check = $('.menu-container').hasClass('show-menu');
+    console.log(check);
     if (event.keyCode == 37) {
-      $('.dirs').first().toggleClass('keys');
-      $('.menu-container').toggleClass('show-menu');
-
+      $('.menu-container').removeClass('show-menu');
     } else if (event.keyCode == 39) {
-      //console.log($('.menu-trigger').hasClass('show-menu'));
-      $('.dirs').first().toggleClass('keys');
-      $('.menu-container').toggleClass('show-menu');
+      $('.menu-container').addClass('show-menu');
+    }
+  });
+
+
+  var li = $('li');
+  var menus;
+  $(window).keydown(function(e) {
+    if (e.which === 40) {
+      if (menus) {
+        menus.removeClass('keys');
+        next = menus.next();
+        if (next.length > 0) {
+          menus = next.addClass('keys');
+        } else {
+          menus = li.eq(0).addClass('keys');
+        }
+      } else {
+        menus = li.eq(0).addClass('keys');
+      }
+    } else if (e.which === 38) {
+      if (menus) {
+        menus.removeClass('keys');
+        next = menus.prev();
+        if (next.length > 0) {
+          menus = next.addClass('keys');
+        } else {
+          menus = li.last().addClass('keys');
+        }
+      } else {
+        menus = li.last().addClass('keys');
+      }
     }
   });
 

@@ -1479,7 +1479,7 @@ class Parsedown
         {
             $markup .= '>';
 
-            if (!isset($Element['nonNestables'])) 
+            if (!isset($Element['nonNestables']))
             {
                 $Element['nonNestables'] = array();
             }

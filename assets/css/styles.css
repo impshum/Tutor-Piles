@@ -159,9 +159,6 @@ a.menu-toggle:hover {
   background: #000;
 }
 
-.menu-list a, .menu-label {
-  color: #fff;
-}
 
 .home {
   position: fixed;
@@ -250,3 +247,5 @@ a.menu-toggle:hover {
   background-size: cover;
 }
 */
+
+li.selected {background:yellow !important;}

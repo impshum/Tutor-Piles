@@ -1,6 +1,6 @@
 <?php
 
-include 'Parsedown.php';
+include 'parsedown.php';
 
 $Parsedown = new Parsedown();
 
@@ -49,12 +49,14 @@ function get_dirs()
 {
     $dirs = glob('content/*', GLOB_ONLYDIR);
     natsort($dirs);
+    $menu_id = 0;
     foreach ($dirs as $dir) {
         $d1 = explode('/', $dir);
         $d2 = strstr($d1[1], '-');
         $d3 = str_replace('-', ' ', $d2);
         $d4 = ltrim($d3);
         $d5 = ucfirst($d4);
-        echo "<li><a class='dirs' href='?$d1[1]'>$d5</a></li>";
+        echo "<li><a id='menu-$menu_id' class='dirs' href='?$d1[1]'>$d5</a></li>";
+        $menu_id++;
     }
 }
