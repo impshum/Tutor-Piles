@@ -56,7 +56,7 @@ function get_dirs()
         $d3 = str_replace('-', ' ', $d2);
         $d4 = ltrim($d3);
         $d5 = ucfirst($d4);
-        echo "<li><a id='menu-$menu_id' class='dirs' href='?$d1[1]'>$d5</a></li>";
+        echo "<li class='menoo'><a id='menu-$menu_id' class='dirs' href='?$d1[1]'>$d5</a></li>";
         $menu_id++;
     }
 }

@@ -16,6 +16,7 @@ $(document).ready(function() {
     hljs.highlightBlock(block);
   });
 
+  var newUrl;
   $('a').click(function() {
     event.preventDefault();
     newUrl = this.href;
@@ -39,46 +40,55 @@ $(document).ready(function() {
 
   $('.paged').text($('.section').length);
 
+  var check;
+  var menus;
+  var li = $('li.menoo');
+
   $('html').keydown(function(event) {
     check = $('.menu-container').hasClass('show-menu');
     console.log(check);
-    if (event.keyCode == 37) {
-      $('.menu-container').removeClass('show-menu');
-    } else if (event.keyCode == 39) {
-      $('.menu-container').addClass('show-menu');
-    }
-  });
 
+      if (event.keyCode == 37) {
+        $('.menu-container').removeClass('show-menu');
+      } else if (event.keyCode == 39) {
+        $('.menu-container').addClass('show-menu');
+      }
 
-  var li = $('li');
-  var menus;
-  $(window).keydown(function(e) {
-    if (e.which === 40) {
-      if (menus) {
-        menus.removeClass('keys');
-        next = menus.next();
-        if (next.length > 0) {
-          menus = next.addClass('keys');
+      if (event.which === 40) {
+        if (menus) {
+          menus.removeClass('keys');
+          next = menus.next();
+          if (next.length > 0) {
+            menus = next.addClass('keys');
+          } else {
+            menus = li.eq(0).addClass('keys');
+          }
         } else {
           menus = li.eq(0).addClass('keys');
         }
-      } else {
-        menus = li.eq(0).addClass('keys');
-      }
-    } else if (e.which === 38) {
-      if (menus) {
-        menus.removeClass('keys');
-        next = menus.prev();
-        if (next.length > 0) {
-          menus = next.addClass('keys');
+      } else if (event.which === 38) {
+        if (menus) {
+          menus.removeClass('keys');
+          next = menus.prev();
+          if (next.length > 0) {
+            menus = next.addClass('keys');
+          } else {
+            menus = li.last().addClass('keys');
+          }
         } else {
           menus = li.last().addClass('keys');
         }
-      } else {
-        menus = li.last().addClass('keys');
+      } else if (event.which === 13) {
+        changeSlide = $('.keys').find('a').attr('href');
+        $('html').addClass('fadeSiteOut');
+        setTimeout(function() {
+          window.location = changeSlide;
+        }, 1000);
       }
-    }
+
   });
+
+
 
 });
 
