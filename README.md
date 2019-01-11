@@ -42,7 +42,12 @@ When creating a new slideshow create a new folder with the name starting in the 
 
 #### **IMPORTANT MENU JIGGERY**
 
-To access the menu push the cursor to the left side of the window. It should slide open on hover.
+To access the menu using the keyboard (so far)...
+
+    Right - Opens the menu
+    Left - Closes the menu
+    Up/Down - Navigate the menu
+    Enter - Choose slideshow
 
 ---
 
