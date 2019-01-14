@@ -27,7 +27,7 @@ $(document).ready(function() {
       }, 1000);
     } else if ($(this).hasClass('remote')) {
       $('.menu-container').removeClass('show-menu');
-      window.open('show.html', 'newwindow', 'width=300,height=250');
+      window.open('show.php', 'newwindow', 'width=500,height=500');
     } else if ($(this).hasClass('menu-toggle')) {
       $('.menu-container').toggleClass('show-menu');
     } else if ($(this).hasClass('help-toggle')) {
