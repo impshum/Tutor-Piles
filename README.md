@@ -1,12 +1,14 @@
 # Tutor Piles
 
-A slideshow thing which you write in Markdown.
+A slideshow thing which you write in Markdown. Now with added remote controls and keyboard shortcuts.
 
 ![](https://github.com/impshum/Tutor-Piles/blob/master/screenshots/screenshot1.png?raw=true)
 
 ![](https://github.com/impshum/Tutor-Piles/blob/master/screenshots/screenshot2.png?raw=true)
 
 ![](https://github.com/impshum/Tutor-Piles/blob/master/screenshots/screenshot3.png?raw=true)
+
+![](https://github.com/impshum/Tutor-Piles/blob/master/screenshots/screenshot4.png?raw=true)
 
 Slideshows are arranged in subfolders of ```content/``` and slides are individual markdown files within these.
 
@@ -48,6 +50,8 @@ To access the menu using the keyboard (so far)...
     Left - Closes the menu
     Up/Down - Navigate the menu
     Enter - Choose slideshow
+    R - Open remote controls
+    Esc - Go to home screen
 
 ---
 
