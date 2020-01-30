@@ -59,6 +59,6 @@ To run a simple PHP server...
 
     php -S 0.0.0.0:8080 -t /path/to/folder/with/index.php
 
----
+### Tip
 
 BTC - 1AYSiE7mhR9XshtS4mU2rRoAGxN8wSo4tK
